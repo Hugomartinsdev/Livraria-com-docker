@@ -1,0 +1,2 @@
+Main-Class: dtilivrari.Menu
+Class-Path: sqlite-jdbc-3.50.2.0.jar    

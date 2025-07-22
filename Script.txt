@@ -1,0 +1,19 @@
+create table if not exists Livro(
+    id integer primary key, 
+    nome Varchar(100) Not Null, 
+    autor Varchar(100) Not Null , 
+    genero Varchar(100) Not Null, 
+    ano_lancamento Integer Not Null,
+    preco Interger Not Null, 
+    data_ultima_compra text,
+    quantidade integer Not Null
+);
+
+
+CREATE TABLE IF NOT EXISTS log_compra (
+    id INTEGER PRIMARY KEY,
+    id_livro INTEGER NOT NULL,
+    quantidade_comprada INTEGER NOT NULL,
+    data_compra TEXT NOT NULL,
+    FOREIGN KEY (id_livro) REFERENCES livros(id)
+);
